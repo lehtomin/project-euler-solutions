@@ -1,6 +1,6 @@
 using System;
 
-namespace Problem01
+namespace Problem0001
 {
     public class Program
     {
