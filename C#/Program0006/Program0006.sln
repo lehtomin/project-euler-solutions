@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program0006", "Program0006\Program0006.csproj", "{9F0E0DF7-1AAC-4AA7-8CC4-979D417D1D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem0006.UnitTests", "SumSquareDifferenceTests\Problem0006.UnitTests.csproj", "{BE20764B-53E0-49A9-AA21-E512BB9490B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F0E0DF7-1AAC-4AA7-8CC4-979D417D1D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0E0DF7-1AAC-4AA7-8CC4-979D417D1D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0E0DF7-1AAC-4AA7-8CC4-979D417D1D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0E0DF7-1AAC-4AA7-8CC4-979D417D1D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE20764B-53E0-49A9-AA21-E512BB9490B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE20764B-53E0-49A9-AA21-E512BB9490B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE20764B-53E0-49A9-AA21-E512BB9490B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE20764B-53E0-49A9-AA21-E512BB9490B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6AE4EAD3-135D-4753-AB72-6AFCE312CDE9}
+	EndGlobalSection
+EndGlobal
