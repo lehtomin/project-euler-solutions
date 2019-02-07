@@ -1,23 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Problem0003
 {
     public class PrimeFactorization
     {
-        public static void Main()
-        {
-            var primeFactorization = FindPrimeFactorization(600851475143);
-            Console.WriteLine("Largest prime factor: " + primeFactorization.Max());
-            Console.ReadKey();
-        }
-
         public static List<long> FindPrimeFactorization(long value)
         {
             var result = new List<long>();
             var remaining = value;
-            var primeNumbersList = FindPrimeNumbers(Math.Sqrt(value));
+            var primeNumbersList = FindPrimeNumbers(1, (long)Math.Ceiling(Math.Sqrt(value)));
             foreach (var primeNumber in primeNumbersList)
             {
 
@@ -39,12 +31,23 @@ namespace Problem0003
             return result;
         }
 
-        public static List<long> FindPrimeNumbers(double maxValue)
+        public static List<long> FindPrimeNumbers(long minValue, long maxValue)
         {
+            var currentValue = minValue;
             var result = new List<long>();
-            for (var i = 2; i <= maxValue; i++)
+            if (minValue <= 2)
             {
-                if (IsPrimeNumber(i)) result.Add(i);
+                result.Add(2);
+                currentValue = 3;
+            }
+
+            while (currentValue <= maxValue)
+            {
+                if (IsPrimeNumber(currentValue))
+                    result.Add(currentValue);
+                if (IsEven(currentValue))
+                    currentValue++;
+                else currentValue += 2;
             }
             return result;
         }

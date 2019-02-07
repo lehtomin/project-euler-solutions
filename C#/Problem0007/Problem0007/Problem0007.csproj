@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6DDDBA8F-83B5-4E94-AB7F-5935C08EDC7A}</ProjectGuid>
+    <ProjectGuid>{F52F03F3-949B-4A70-8822-8699AAB42EB6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Problem0003</RootNamespace>
-    <AssemblyName>Problem0003</AssemblyName>
+    <RootNamespace>Program0007</RootNamespace>
+    <AssemblyName>Program0007</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PrimeFactorization.cs" />
+    <Compile Include="PrimeNumbers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\src\ProjectEuler\project-euler-solutions\C#\Problem0003\Problem0003\Problem0003.csproj">
+      <Project>{6dddba8f-83b5-4e94-ab7f-5935c08edc7a}</Project>
+      <Name>Problem0003</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
