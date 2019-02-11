@@ -51,7 +51,7 @@ namespace Problem0008
 
             long result = 0;
             var factors = new List<int>();
-            for (var i = 0; i < series.Count - numberOfAdjacentDigits; i++)
+            for (var i = 0; i <= series.Count - numberOfAdjacentDigits; i++)
             {
                 //Lesson learned: using var here instead of long caused value to be typed as int. It would then overflow resulting in incorrect solution.
                 long productOfAdjacentNumbers = series[i];
@@ -83,6 +83,6 @@ namespace Problem0008
     {
         public long Product { get; set; }
 
-        public List<int> Factors { get; set; }
+        public List<int> Factors { get; set; } = new List<int>();
     }
 }
