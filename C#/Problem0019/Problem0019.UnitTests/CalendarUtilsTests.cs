@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Problem0019.UnitTests
@@ -53,6 +54,20 @@ namespace Problem0019.UnitTests
         public void WhenItIsFebruaryAndNotLeapYear_ThenNumberOfDaysInAMonthIs28()
         {
             Assert.AreEqual(28, _calendarUtils.DaysInAMonth(2, 2019));
+        }
+
+        [TestMethod]
+        public void WhenGettingSundaysThatAreOnFirstDayOfMonth_ThenGetCorrectAmount()
+        {
+            // Arrange
+            var startDate = new DateTime(2019, 1, 1);
+            var endDate = new DateTime(2019, 12, 31);
+
+            // Act
+            var result = _calendarUtils.GetSundaysThatAreOnTheFirstDayOfMonth(startDate, endDate);
+
+            // Assert
+            Assert.AreEqual(2, result.Count);
         }
     }
 }
