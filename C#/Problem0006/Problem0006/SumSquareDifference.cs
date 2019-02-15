@@ -1,6 +1,6 @@
 using System;
 
-namespace Program0006
+namespace Problem0006
 {
     public class SumSquareDifference
     {

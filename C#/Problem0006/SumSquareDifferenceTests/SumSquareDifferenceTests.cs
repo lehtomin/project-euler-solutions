@@ -1,6 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Program0006;
 
 namespace Problem0006.UnitTests
 {
@@ -11,7 +10,7 @@ namespace Problem0006.UnitTests
         [ExpectedException(typeof(ArgumentException))]
         public void WhenUpperLimitIsBiggerThanLowerLimit_ThenCalculateSumSquareDifferenceThrowsException()
         {
-            var sum = SumSquareDifference.CalculateSumSquareDifference(5, -2);
+            SumSquareDifference.CalculateSumSquareDifference(5, -2);
         }
 
         [TestMethod]
