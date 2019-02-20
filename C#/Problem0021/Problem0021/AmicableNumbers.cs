@@ -14,7 +14,7 @@ namespace Problem0021
             return amicableNumbers;
         }
 
-        private Dictionary<long, long> GetNumbersAndSumOfTheirProperDivisors(int maxValue)
+        public Dictionary<long, long> GetNumbersAndSumOfTheirProperDivisors(int maxValue)
         {
             var numbersAndTheirSums = new Dictionary<long, long>();
             for (var i = 2; i <= maxValue; i++)
