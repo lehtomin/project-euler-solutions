@@ -5,10 +5,18 @@ namespace Problem0012.UnitTests
     [TestClass]
     public class TriangularNumberTests
     {
+        private TriangularNumber _triangularNumber;
+
+        [TestInitialize]
+        public void Initialize()
+        {
+            _triangularNumber = new TriangularNumber();
+        }
+
         [TestMethod]
         public void TestGetCorrectTriangularNumbers()
         {
-            var result = TriangularNumber.GetTriangularNumbers(1, 7);
+            var result = _triangularNumber.GetTriangularNumbers(1, 7);
             Assert.AreEqual(7, result.Count);
             Assert.IsTrue(result.Contains(1));
             Assert.IsTrue(result.Contains(3));
@@ -22,7 +30,7 @@ namespace Problem0012.UnitTests
         [TestMethod]
         public void TestGetFirstTriangularNumberWithCertainAmountOfDivisors()
         {
-            var result = TriangularNumber.GetTriangularNumberWithCertainAmountOfDivisors(6);
+            var result = _triangularNumber.GetTriangularNumberWithCertainAmountOfDivisors(6);
             Assert.AreEqual(6, result.Divisors.Count);
             Assert.AreEqual(28, result.TriangularNumber);
         }
