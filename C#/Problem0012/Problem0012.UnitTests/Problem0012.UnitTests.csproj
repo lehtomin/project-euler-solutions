@@ -12,8 +12,4 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Problem0012\Problem0012.csproj" />
-  </ItemGroup>
-
 </Project>

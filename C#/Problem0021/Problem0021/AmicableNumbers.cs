@@ -1,11 +1,18 @@
 using System.Collections.Generic;
 using System.Linq;
-using Problem0012;
+using ProjectEulerSolutions.Common;
 
 namespace Problem0021
 {
     public class AmicableNumbers
     {
+        private readonly DivisorClassificationOfNumber _divisorClassificationOfNumber;
+
+        public AmicableNumbers()
+        {
+            _divisorClassificationOfNumber = new DivisorClassificationOfNumber();
+        }
+
         public IEnumerable<long> GetAmicableNumbers(int maxValue)
         {
             var numbersAndTheirSums = GetNumbersAndSumOfTheirProperDivisors(maxValue);
@@ -20,7 +27,7 @@ namespace Problem0021
             for (var i = 2; i <= maxValue; i++)
             {
                 var sumOfProperDivisors = 0L;
-                var divisors = GetProperDivisorsForANumber(i);
+                var divisors = _divisorClassificationOfNumber.GetProperDivisorsForANumber(i);
                 foreach (var divisor in divisors)
                 {
                     sumOfProperDivisors += divisor;
@@ -32,12 +39,7 @@ namespace Problem0021
             return numbersAndTheirSums;
         }
 
-        public List<long> GetProperDivisorsForANumber(long number)
-        {
-            var divisors = TriangularNumber.GetDivisorsForANumber(number);
-            divisors.Remove(number);
-            return divisors;
-        }
+
 
         private IEnumerable<long> FindAmicableNumbers(Dictionary<long, long> numbersAndTheirSums)
         {

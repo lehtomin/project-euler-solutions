@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Problem0012\Problem0012\Problem0012.csproj">
-      <Project>{b99e2286-ea3b-47d7-bef8-3b0a1e3d47fc}</Project>
-      <Name>Problem0012</Name>
+    <ProjectReference Include="..\..\ProjectEulerSolutions.Common\ProjectEulerSolutions.Common\ProjectEulerSolutions.Common.csproj">
+      <Project>{f286ffde-eb51-48b5-9a6b-85db3b11732f}</Project>
+      <Name>ProjectEulerSolutions.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
